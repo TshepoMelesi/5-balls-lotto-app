@@ -1,38 +1,94 @@
-.App {
-  text-align: center;
+:root{
+  --size: 3.2rem;
 }
+.App{
+  background-color: rgb(181, 10, 203);
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+  width: 400px;
+  height: 600px;
+
+  display: grid;
+  grid-template-rows: 3rem auto 5rem;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.Logo{
+  margin-top: 0.8rem;
+  margin-left: 0.5rem;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.slot{
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
+  margin-top: 0.4rem;
+
+}
+.slot .ball{
+  width: var(--size);
+  height: var(--size);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: yellow;
+
+  border-radius: 50%;
+  margin: 0.2rem;
 }
 
-.App-link {
-  color: #61dafb;
+.History{
+  background-color: yellow;
+  margin: 0.4rem;
+  margin-bottom: 0;
+
+  padding: 0.2rem;
+  height: 340px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.Footer{
+  background-color: purple;
+}
+
+.Footer .Controls {
+  display: flex;
+  justify-content: center;
+}
+
+.Footer .Controls .PlayBtn{
+  width: 96%;
+  height: 1.5rem;
+  text-transform: uppercase;
+
+  border: 0;
+  background-color: yellow;
+  font-weight: bold;
+}
+.Footer .Controls .PlayBtn:hover{
+  background-color: rgb(233, 233, 8);
+}
+
+.Footer .Ticket{
+  display: flex;
+  justify-content: center;
+}
+
+.Footer .Ticket .UserInput{
+  width: calc(var(--size) * .7);
+  height: calc(var(--size) * .7);
+  margin: 0.5rem 0.2rem;
+  text-align: center;
+  border:0;
+  outline: 0;
+  font-size: 1.5rem;
+  font-weight: bold;
+
+  background-color: inherit;
+  border-bottom: 3px solid white;
+
+  transition: all 150ms linear;
+}
+input::-webkit-outer-spin-button, input::-webkit-inner-spin-button{
+  display: none;
+}
+.Footer .Ticket .UserInput:focus{
+  border-color: red;
 }
